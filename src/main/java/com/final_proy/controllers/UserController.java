@@ -8,5 +8,7 @@ public class UserController {
     public UserController(final ClientService ClientService) {
         // Método para tratar los gets de /users
         get("/users", (request, response) -> ClientService.getAllUsers());
+        
+        get("/listarPost", (request, response) -> ClientService.getPostsByUser("Antonio"));
     }
 }
