@@ -2,6 +2,7 @@ package com.final_proy.main;
 
 import com.final_proy.Clases.*;
 import com.final_proy.Servicios.*;
+import com.final_proy.controllers.UserController;
 import freemarker.template.Configuration;
 import spark.ModelAndView;
 import spark.Session;
@@ -40,7 +41,11 @@ public class Main {
         uploadDir.mkdir(); // create the upload directory if it doesn't exist
         externalStaticFileLocation("upload");
         new ClientController(new ClientService());
+        //Manejo de Rest:
 
+        new UserController(new ClientService());
+
+        /////////////////
 
         //iniciamos la base de datos
         try {
