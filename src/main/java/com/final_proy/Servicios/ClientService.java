@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class ClientService {
+    //Listar todos los Post de Usuarios.
     public List<Post> getAllPost(){
         return MantenimientoPost.getInstancia().findAll();
     }
